@@ -1,15 +1,10 @@
 // main.js
 
-
 // Function to append the toggle button
 function appendToggleButton() {
-    console.log("append start");
-
     var actionsDiv = document.querySelector('div#actions');
-    console.log("actionsDiv: ", actionsDiv);
 
     if (actionsDiv) {
-        console.log("append if start");
         var button = document.createElement('button');
         button.textContent = 'Comments?';
         button.addEventListener('click', toggleCommentSection);
@@ -22,8 +17,8 @@ function appendToggleButton() {
         button.style.border = 'none';
         button.style.borderRadius = '18px';
         button.style.padding = '8px 16px';
+        button.style.marginLeft = '8px';
         button.style.cursor = 'pointer';
-        button.style.margin = '8px';
         button.style.height = '36px';
 
         // Hover effect
@@ -44,14 +39,10 @@ function appendToggleButton() {
             button.style.backgroundColor = '#272727'; 
         });
     }
-
-    console.log("append end");
 }
 
 // Function to toggle the visibility of the comment section
 function toggleCommentSection() {
-    console.log("toggle start");
-
     var commentSection = document.querySelector('ytd-comments');
 
     if (commentSection) {
@@ -61,8 +52,6 @@ function toggleCommentSection() {
             commentSection.style.display = 'none';
         }
     }
-
-    console.log("toggle end");
 }
 
 // Callback function for MutationObserver
