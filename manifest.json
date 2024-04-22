@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Comment Toggle",
+  "description": "Adds a button to toggle the visibility of the comment section on YouTube.",
+  "version": "1.0",
+  "content_scripts": [
+      {
+          "matches": ["*://www.youtube.com/watch*"],
+          "js": ["main.js"]
+        }
+    ],
+  "permissions": []
+}
