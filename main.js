@@ -63,6 +63,8 @@ function mutationCallback(mutationsList, observer) {
                 // If div#actions is available, stop observing and append the toggle button
                 observer.disconnect();
                 appendToggleButton();
+                var commentSection = document.querySelector('ytd-comments');
+                commentSection.style.display = 'none';
                 break;
             }
         }
